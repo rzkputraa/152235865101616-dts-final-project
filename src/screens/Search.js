@@ -52,7 +52,6 @@ function Search() {
                         <Card
                           sx={{
                             height: "55vh",
-                            width: "20vw",
                             backgroundImage: `url(${phone.image})`,
                             backgroundPositionX: "center",
                             backgroundPositionY: "center",
