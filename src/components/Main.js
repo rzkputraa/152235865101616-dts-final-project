@@ -1,5 +1,6 @@
 import { Box, Container, Paper } from "@mui/material";
 import React from "react";
+import Footer from "./Footer";
 import ResAppBar from "./ResAppBar";
 
 const Main = ({ children, ml = "20px", mr = "20px" }) => {
@@ -20,8 +21,8 @@ const Main = ({ children, ml = "20px", mr = "20px" }) => {
           }}
         >
           {children}
-          {/* <Footer /> */}
         </Box>
+        <Footer />
       </Paper>
     </>
   );
