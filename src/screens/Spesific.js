@@ -61,7 +61,7 @@ const Spesific = () => {
         <Card
           sx={{
             display: "flex",
-
+            justifyContent: "space-around",
             boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
           }}
         >
@@ -70,7 +70,7 @@ const Spesific = () => {
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <CardMedia
                   component="img"
-                  sx={{ width: 458, height: 604 }}
+                  sx={{ width: 418, height: 570 }}
                   image={Phone.thumbnail}
                   alt="Phone"
                 />
