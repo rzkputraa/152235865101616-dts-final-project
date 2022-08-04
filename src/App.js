@@ -7,6 +7,7 @@ import Login from "./screens/Login";
 import NotFound from "./screens/NotFound";
 import Profil from "./screens/Profil";
 import Register from "./screens/Register";
+import Search from "./screens/Search";
 import Spesific from "./screens/Spesific";
 
 function App() {
@@ -34,6 +35,11 @@ function App() {
       <Route path='/profil' element={
         <ProtectedRoute isLogin={true}>
           <Profil />
+        </ProtectedRoute>
+      } />
+      <Route path='/cari/:cari' element={
+        <ProtectedRoute isLogin={true}>
+          <Search />
         </ProtectedRoute>
       } />
       <Route path='*' element={<NotFound />} />

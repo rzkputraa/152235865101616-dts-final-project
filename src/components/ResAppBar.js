@@ -80,7 +80,7 @@ const ResAppBar = () => {
     let searchString = event.target.value;
     if (searchString.length > 0) {
       if (event.key === "Enter") {
-        navigate("/search/" + searchString);
+        navigate("/cari/" + searchString);
       }
     } else {
       return;
@@ -121,23 +121,29 @@ const ResAppBar = () => {
     <AppBar position="fixed" style={{ backgroundColor: "#F8F8FF" }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "MouseMemoirs",
-              fontWeight: 400,
-              color: "#2F4F4F",
-              fontSize: "1.8rem",
+          <Link
+            style={{
+              // backgroundColor: "#1A2027",
               textDecoration: "none",
             }}
+            to={"/"}
           >
-            WIKIHAPEDIA
-          </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "MouseMemoirs",
+                fontWeight: 400,
+                color: "#2F4F4F",
+                fontSize: "1.8rem",
+                textDecoration: "none",
+              }}
+            >
+              WIKIHAPEDIA
+            </Typography>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -177,25 +183,32 @@ const ResAppBar = () => {
           </Box>
 
           {/* AppBar V Kecil */}
-
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "MouseMemoirs",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "#2F4F4F",
+          <Link
+            style={{
+              // backgroundColor: "#1A2027",
               textDecoration: "none",
             }}
+            to={"/"}
           >
-            WIKIHAPEDIA
-          </Typography>
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href=""
+              sx={{
+                mr: 2,
+                display: { xs: "flex", md: "none" },
+                flexGrow: 1,
+                fontFamily: "MouseMemoirs",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "#2F4F4F",
+                textDecoration: "none",
+              }}
+            >
+              WIKIHAPEDIA
+            </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
