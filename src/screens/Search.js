@@ -42,33 +42,37 @@ function Search() {
           <Grid container spacing={2} marginTop={5}>
             {searchedPhone.length === 0
               ? "Loading"
-              : searchedPhone.phones.map((phone) => {
+              : searchedPhone.phones.map((phone, index) => {
                   return (
-                    <Grid item xs={2}>
+                    <Grid item xs={12} sm={6} md={4} key={index}>
                       <Link
                         to={`/specifications/${phone.slug}`}
                         style={{ textDecoration: "none" }}
                       >
                         <Card
                           sx={{
-                            height: "250px",
+                            height: "55vh",
+                            width: "20vw",
                             backgroundImage: `url(${phone.image})`,
                             backgroundPositionX: "center",
                             backgroundPositionY: "center",
                             backgroundRepeat: "no-repeat",
                             backgroundSize: "cover",
+                            borderRadius: "10px",
                             "&:hover .hidden": {
-                              display: "flex",
-                              color: "white",
+                              opacity: [0.9, 0.8, 0.7],
+                              transition: "all 0.3s ease-in-out",
+                              transform: "scale(1.05)",
                             },
                           }}
                         >
                           <Box
                             className="hidden"
                             sx={{
-                              backgroundColor: "rgba(0,0,0,0.5)",
+                              background:
+                                "linear-gradient(19deg, rgba(0,0,0,1) 0%, rgba(28,28,192,0.03918662191439071) 88%)",
                               height: "100%",
-                              display: "none",
+                              display: "flex",
                               justifyContent: "center",
                               alignItems: "center",
                             }}
@@ -76,7 +80,7 @@ function Search() {
                             <Typography
                               fontSize={16}
                               fontWeight="bold"
-                              sx={{ textAlign: "center" }}
+                              sx={{ textAlign: "center", color: "#fff" }}
                             >
                               {phone.phone_name}
                             </Typography>

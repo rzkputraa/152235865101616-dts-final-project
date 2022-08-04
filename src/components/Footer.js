@@ -13,7 +13,7 @@ function Footer() {
       >
         <Container maxWidth="lg">
           <Stack direction="column" gap={3}>
-            <Typography component="large" variant="caption">
+            <Typography component="small" variant="caption">
               © 2022 Rizki Putra Wicaksono (152235865101-616), All Right
               Reserved
             </Typography>
